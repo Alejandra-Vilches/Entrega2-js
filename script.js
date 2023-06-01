@@ -42,7 +42,7 @@ console.log(productos);
 
 function descuento_cliente(clienta_antigua){
 
-    const valor_producto = 11900;
+    const valor_producto = productos[3].precio;
     let cantidad_producto = prompt("Ingrese la cantidad que desea comprar");
 
     if (clienta_antigua == "si"){
@@ -78,6 +78,7 @@ function descuento_cliente(clienta_antigua){
 //
 
 console.log("Bienvenido a tienda Beauty");
+console.log("Estas accediendo a descuento de uñas para clientas antiguas");
 let numero_venta = prompt("Ingresar número de venta o cerrar día con 0");
 
 while ( numero_venta >= 1 ) {
