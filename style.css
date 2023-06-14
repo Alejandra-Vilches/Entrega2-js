@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: montserrat; }
+
+h1 {
+  text-align: center;
+  color: palevioletred;
+  margin-top: 30px;
+  font-size: 1.5rem; }

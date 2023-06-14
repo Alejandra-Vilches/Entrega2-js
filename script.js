@@ -77,7 +77,6 @@ function descuento_cliente(clienta_antigua){
 
 //
 
-console.log("Bienvenido a tienda Beauty");
 console.log("Estas accediendo a descuento de uñas para clientas antiguas");
 let numero_venta = prompt("Ingresar número de venta o cerrar día con 0");
 
@@ -97,6 +96,12 @@ if ( numero_venta == 0 ){
     console.log("A finalizado el día de ventas");
 }
 
-//falta 
+//DOM
+
+let titulo_principal = document.getElementById("titulo_principal");
+
+titulo_principal.innerHTML = "<h1>Estas accediendo a descuento de uñas para clientas antiguas</h1>";
+
+let numero_vent = document.getElementById("venta");
 
 
