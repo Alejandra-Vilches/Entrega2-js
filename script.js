@@ -97,6 +97,6 @@ if ( numero_venta == 0 ){
     console.log("A finalizado el día de ventas");
 }
 
-//falta DOM
+//falta 
 
 
