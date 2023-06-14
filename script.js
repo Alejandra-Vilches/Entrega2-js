@@ -1,4 +1,4 @@
-
+/*
 // Array con objetos
 
 class Producto{
@@ -96,6 +96,7 @@ if ( numero_venta == 0 ){
     console.log("A finalizado el día de ventas");
 }
 
+
 //DOM
 
 let titulo_principal = document.getElementById("titulo_principal");
@@ -103,5 +104,24 @@ let titulo_principal = document.getElementById("titulo_principal");
 titulo_principal.innerHTML = "<h1>Estas accediendo a descuento de uñas para clientas antiguas</h1>";
 
 let numero_vent = document.getElementById("venta");
+//
+*/
 
+function btn_entrar(){
 
+    let numero_venta = document.getElementById("numero_venta");
+
+        while ( numero_venta >= 1 ) {
+
+            console.log("Bienvenida al sistema. Número de venta: ", numero_venta);
+        
+        }
+        
+        if ( numero_venta == 0 ){
+            console.log("A finalizado el día de ventas");
+        }
+}
+
+let entrar_sistema = document.getElementById("entrar_sistema");
+
+entrar_sistema.addEventListener("click", btn_entrar);
