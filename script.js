@@ -142,3 +142,62 @@ localStorage.setItem("numero_venta", 3);
 let numero_venta = localStorage.getItem("numero_venta");
 
 console.log(numero_venta);
+
+//localStorage.removeItem("");
+
+//localStorage.clear();
+
+// Array con objetos
+
+class Producto{
+    constructor(nombre, codigo, precio, costo_neto, ganancia){
+        this.nombre = nombre;
+        this.codigo = codigo;
+        this.precio = precio;
+        this.costo_neto = costo_neto;
+        this.ganancia = ganancia;
+    }
+
+    mostrar_codigo(){
+        console.log("Codigo del producto:" + "" + this.codigo);
+    }
+
+    cantidadGanancia(){
+        this.ganancia = this.precio - this.costo_neto;
+    }
+}
+
+const productos = [];
+productos.push(new Producto ("lima 180 rosada", "CD2672", 1000, 300));
+productos.push(new Producto ("lima 280", "CD0395", 2400, 1200));
+productos.push(new Producto ("serum cabello", "SC9475", 16000, 10000));
+productos.push(new Producto ("uñas impress", "UO9274", 11900, 6800));
+
+console.log(productos);
+console.log(productos[2]);
+productos[2].mostrar_codigo();
+
+for (const producto of productos){
+    producto.cantidadGanancia();
+
+    console.log(producto.ganancia);
+}
+
+console.log(productos);
+
+localStorage.setItem("arr_productos", productos);
+
+console.log(localStorage.getItem("arr_productos"));
+
+let productos_JSON = JSON.stringify(productos);
+
+console.log(productos_JSON);
+
+localStorage.setItem("productos", productos_JSON);
+
+let recuperando_productos = localStorage.getItem("productos");
+
+console.log(recuperando_productos);
+
+recuperando_productos = JSON.parse(recuperando_productos);
+console.log(recuperando_productos);
