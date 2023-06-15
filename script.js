@@ -111,16 +111,25 @@ function btn_entrar(){
 
     let numero_venta = document.getElementById("numero_venta");
 
-        while ( numero_venta >= 1 ) {
+        if ( numero_venta.value >= 1 ) {
 
-            console.log("Bienvenida al sistema. Número de venta: ", numero_venta);
+            console.log("Bienvenida al sistema. Número de venta: " + numero_venta.value);
+
+            let parrafo = document.createElement("h4");
+            parrafo.innerText = "Bienvenida al sistema. Número de venta: " + numero_venta.value;
+            sistema.append(parrafo);
         
         }
         
-        if ( numero_venta == 0 ){
+        else if ( numero_venta.value == 0 ){
             console.log("A finalizado el día de ventas");
+
+            let parrafo = document.createElement("h5");
+            parrafo.innerText = "A finalizado el día de ventas";
+            sistema.append(parrafo);
         }
 }
+     
 
 let entrar_sistema = document.getElementById("entrar_sistema");
 
