@@ -134,3 +134,11 @@ function btn_entrar(){
 let entrar_sistema = document.getElementById("entrar_sistema");
 
 entrar_sistema.addEventListener("click", btn_entrar);
+
+// STORAGE
+
+localStorage.setItem("numero_venta", 3);
+
+let numero_venta = localStorage.getItem("numero_venta");
+
+console.log(numero_venta);
